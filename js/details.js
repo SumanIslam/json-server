@@ -1,4 +1,6 @@
-const postDetailsContainer = document.querySelector('.details')
+const postDetailsContainer = document.querySelector('.details');
+const deleteBlog = document.querySelector('.delete');
+
 const urlParamId = new URLSearchParams(window.location.search).get('id');
 
 const renderDetails = async () => {
@@ -14,8 +16,15 @@ const renderDetails = async () => {
   `;
 
   postDetailsContainer.innerHTML = template;
-  console.log(post);
 }
 
+const removeBlog = async () => {
+  await fetch(`http://localhost:3000/posts/${urlParamId}`,{
+    method: 'DELETE'
+  })
 
+  window.location.replace('/index.html');
+}
+
+deleteBlog.addEventListener('click', removeBlog)
 window.addEventListener('DOMContentLoaded', renderDetails)

@@ -29,10 +29,12 @@ form {
 input, textarea {
   display: block;
   margin: 16px 0;
-  padding: 6px 10px;
+  padding: 8px 10px;
   width: 100%;
   border: 1px solid #ddd;
-  font-family: 'Roboto';
+  border-radius: 5px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 100%;
 }
 textarea {
   min-height:200px;
@@ -53,4 +55,13 @@ textarea {
 }
 .post a {
   color: #36cca2;
+}
+
+button {
+  background-color: #36cca2;
+  color: #fff;
+  padding: 10px 1.2rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
 }

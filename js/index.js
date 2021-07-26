@@ -6,7 +6,6 @@ const renderPosts = async (e) => {
 
   const response = await fetch(uri);
   const posts = await response.json();
-  console.log(posts);
 
   let template = '';
   posts.forEach(post => {

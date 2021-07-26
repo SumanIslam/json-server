@@ -1,0 +1,30 @@
+{
+	"posts": [
+		{
+			"id": 1,
+			"title": "Welcome to the new blog",
+			"body": "Lorem Ipsum is simply dummy text of the printing and         typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+			"likes": 30
+		},
+		{
+			"id": 2,
+			"title": "How to be a good programmer",
+			"body": "First, you have to be an effective problem solver. This is an important place to start since programming is problem-solving. Although there are many ways to solve a problem, there are a few parts of the process that stand out to me. Programmers who are also great problem solvers distill a problem to its essence, in order to identify their overall aim and begin a problem with purpose. Then, they break each problem into small, manageable parts — attacking each part in turn, and sometimes in visual terms by drawing a picture to make it “real world.",
+			"likes": 80
+		},
+		{
+			"id": 3,
+			"title": "How to be a MERN Stack developer",
+			"body": "MERN is one of several variations of the MEAN stack (MongoDB Express Angular Node), where the traditional Angular.js frontend framework is replaced with React.js. Other variants include MEVN (MongoDB, Express, Vue, Node), and really any frontend JavaScript framework can work. Express and Node make up the middle (application) tier. Express.js is a server-side web framework, and Node.js the popular and powerful JavaScript server platform. Regardless of which variant you choose, ME(RVA)N is the ideal approach to working with JavaScript and JSON, all the way through.",
+			"likes": 50
+		}
+	],
+	"polls": [
+		{
+			"id": 1,
+			"question": "Do you prefer Vue or React?",
+			"answerA": "Vue",
+			"answerB": "React"
+		}
+	]
+}

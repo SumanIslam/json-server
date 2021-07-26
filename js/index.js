@@ -1,8 +1,13 @@
 const blogPostContainer = document.querySelector('.blogs');
+const searchForm = document.querySelector('.search');
+const search = document.querySelector('.search input')
 
-const renderPosts = async (e) => {
-  e.preventDefault();
-  const uri = `http://localhost:3000/posts?_sort=likes&_order=desc`;
+const renderPosts = async (term) => {
+  let uri = `http://localhost:3000/posts?_sort=likes&_order=desc`;
+
+  if(term) {
+    uri += `&q=${term}`;
+  }
 
   const response = await fetch(uri);
   const posts = await response.json();
@@ -23,4 +28,10 @@ const renderPosts = async (e) => {
   blogPostContainer.innerHTML = template;
 }
 
-window.addEventListener('DOMContentLoaded', renderPosts);
+const searchBlogs = () => {
+  renderPosts(searchForm.search.value.trim());
+}
+
+
+search.addEventListener('keyup', searchBlogs);
+window.addEventListener('DOMContentLoaded', () => renderPosts());
